@@ -8,13 +8,15 @@ import (
 	"net/http"
 )
 
-func MakeReq(r http.Request, apiPubKey, apiSecKey string) {
-	if apiSecKey != "" {
-		token := fmt.Sprintf(`Bearer %v`, apiSecKey)
+func MakeReq(r http.Request, keys ApiKeys) {
+
+	// Use Struct to pass in API Keys
+	if keys.SecKey != "" {
+		token := fmt.Sprintf(`Bearer %v`, keys.SecKey)
 		r.Header.Add("Authorization", token)
 	}
 
-	r.Header.Add("x-api-key", apiPubKey)
+	r.Header.Add("x-api-key", keys.PubKey)
 
 	client := &http.Client{}
 

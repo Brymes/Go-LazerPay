@@ -18,3 +18,7 @@ type TransferFundsPayloadData struct {
 	Coin       string
 	Blockchain string
 }
+
+type ApiKeys struct {
+	PubKey, SecKey string
+}
