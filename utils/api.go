@@ -8,7 +8,7 @@ import (
 	"net/http"
 )
 
-func MakeReq(r http.Request, keys ApiKeys) {
+func MakeReq(r http.Request, keys ApiKeys) []byte {
 
 	// Use Struct to pass in API Keys
 	if keys.SecKey != "" {
@@ -32,5 +32,5 @@ func MakeReq(r http.Request, keys ApiKeys) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	log.Fatal(resp)
+	return resp
 }
