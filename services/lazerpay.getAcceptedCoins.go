@@ -8,15 +8,15 @@ import (
 	"net/http"
 )
 
-type GetAcceptedCoins struct {
-	Url string
-}
+type GetAcceptedCoins struct{}
 
 func (gcs *GetAcceptedCoins) Get(keys u.ApiKeys) (u.AcceptedCoins, error) {
 	var data u.AcceptedCoins
 	var b bytes.Buffer
 
-	req, err := http.NewRequest("GET", gcs.Url, &b)
+	url := u.ApiUrlGetAcceptedCoins
+
+	req, err := http.NewRequest("GET", url, &b)
 	if err != nil {
 		fmt.Println(err)
 		return data, err

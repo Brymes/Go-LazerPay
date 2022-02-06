@@ -12,7 +12,7 @@ func TestAcceptedCoins(t *testing.T) {
 		SecKey: "sk_alals",
 	}
 
-	tmp := services.GetAcceptedCoins{utils.ApiUrlGetAcceptedCoins}
+	tmp := services.GetAcceptedCoins{}
 	res, err := tmp.Get(keys)
 	if err != nil {
 		t.Errorf("Get All Coins failed: \n Error was: %v \n Data Returned is: %v", err, res)
