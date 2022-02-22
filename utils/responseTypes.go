@@ -35,3 +35,33 @@ type TransferResponse struct {
 	} `json:"data"`
 	StatusCode int `json:"statusCode"`
 }
+
+type VerifyTransactionResponse struct {
+	Status     string `json:"status"`
+	StatusCode int    `json:"statusCode"`
+	Message    string `json:"message"`
+	Data       struct {
+		Id               string `json:"id"`
+		Reference        string `json:"reference"`
+		SenderAddress    string `json:"senderAddress"`
+		RecipientAddress string `json:"recipientAddress"`
+		ActualAmount     int    `json:"actualAmount"`
+		AmountPaid       int    `json:"amountPaid"`
+		FiatAmount       int    `json:"fiatAmount"`
+		Coin             string `json:"coin"`
+		Currency         string `json:"currency"`
+		Hash             string `json:"hash"`
+		BlockNumber      int    `json:"blockNumber"`
+		Type             string `json:"type"`
+		Status           string `json:"status"`
+		Network          string `json:"network"`
+		Blockchain       string `json:"blockchain"`
+		Customer         struct {
+			Id            string `json:"id"`
+			CustomerName  string `json:"customerName"`
+			CustomerEmail string `json:"customerEmail"`
+			CustomerPhone int    `json:"customerPhone"`
+			Network       string `json:"network"`
+		} `json:"customer"`
+	} `json:"data"`
+}
