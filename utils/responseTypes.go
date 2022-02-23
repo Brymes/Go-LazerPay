@@ -65,3 +65,22 @@ type VerifyTransactionResponse struct {
 		} `json:"customer"`
 	} `json:"data"`
 }
+
+type IniitalizeTransactionResponse struct {
+	Message string `json:"message"`
+	Status  string `json:"status"`
+	Data    struct {
+		BusinessName  string `json:"businessName"`
+		BusinessEmail string `json:"businessEmail"`
+		BusinessLogo  string `json:"businessLogo"`
+		CustomerName  string `json:"customerName"`
+		CustomerEmail string `json:"customerEmail"`
+		Address       string `json:"address"`
+		Coin          string `json:"coin"`
+		CryptoAmount  int    `json:"cryptoAmount"`
+		Currency      string `json:"currency"`
+		FiatAmount    int    `json:"fiatAmount"`
+		Network       string `json:"network"`
+	} `json:"data"`
+	StatusCode int `json:"statusCode"`
+}
