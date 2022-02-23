@@ -34,3 +34,7 @@ func MakeReq(r http.Request, keys ApiKeys) []byte {
 	}
 	return resp
 }
+
+type ApiKeys struct {
+	PubKey, SecKey string
+}

@@ -12,7 +12,7 @@ type ConfirmTransaction struct {
 	Identifier string
 }
 
-func (id *ConfirmTransaction) ConfirmPayment(keys u.ApiKeys) (u.VerifyTransactionResponse, error) {
+func (id *ConfirmTransaction) Confirm(keys u.ApiKeys) (u.VerifyTransactionResponse, error) {
 	var data u.VerifyTransactionResponse
 	var b bytes.Buffer
 

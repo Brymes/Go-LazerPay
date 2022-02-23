@@ -8,7 +8,7 @@ import (
 )
 
 type TransferFunds struct {
-	Amount     int `json:"amount"`
+	Amount     int    `json:"amount"`
 	Recipient  string `json:"recipient"`
 	Coin       string `json:"coin"`
 	Blockchain string `json:"blockchain"`
