@@ -15,7 +15,7 @@ type InitializeTransaction struct {
 	Amount        string `json:"amount"`
 }
 
-func (info *InitializeTransaction) Initialize(keys u.ApiKeys) (u.IniitalizeTransactionResponse, error) {
+func (info *InitializeTransaction) InitTrans(keys u.ApiKeys) (u.IniitalizeTransactionResponse, error) {
 	var data u.IniitalizeTransactionResponse
 
 	url := u.ApiUrlTransferFunds
