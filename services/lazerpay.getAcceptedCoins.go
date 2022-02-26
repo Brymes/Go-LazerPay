@@ -10,7 +10,7 @@ import (
 
 type GetAcceptedCoins struct{}
 
-func (gcs *GetAcceptedCoins) GetCoins(keys u.ApiKeys) (u.AcceptedCoins, error) {
+func (gcs GetAcceptedCoins) GetCoins(keys u.ApiKeys) (u.AcceptedCoins, error) {
 	var data u.AcceptedCoins
 	var b bytes.Buffer
 
