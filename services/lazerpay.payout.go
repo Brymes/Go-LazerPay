@@ -22,7 +22,7 @@ func (tf *TransferFunds) Transfer(keys u.ApiKeys) (u.TransferResponse, error) {
 
 	req, err := http.NewRequest("POST", url, bytes.NewBuffer(payload))
 
-	resp := u.MakeReq(*req, keys)
+	resp := u.MakeReq(*req, keys, true)
 
 	err = json.Unmarshal(resp, &data)
 	if err != nil {

@@ -24,7 +24,7 @@ func (id *ConfirmTransaction) Confirm(keys u.ApiKeys) (u.VerifyTransactionRespon
 		fmt.Println(err)
 		return data, err
 	}
-	resp := u.MakeReq(*req, keys)
+	resp := u.MakeReq(*req, keys, false)
 
 	err = json.Unmarshal(resp, &data)
 	if err != nil {

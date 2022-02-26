@@ -21,7 +21,7 @@ func (gcs *GetAcceptedCoins) Get(keys u.ApiKeys) (u.AcceptedCoins, error) {
 		fmt.Println(err)
 		return data, err
 	}
-	resp := u.MakeReq(*req, keys)
+	resp := u.MakeReq(*req, keys, false)
 
 	err = json.Unmarshal(resp, &data)
 	if err != nil {

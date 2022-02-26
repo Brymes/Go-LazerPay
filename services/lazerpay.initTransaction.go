@@ -23,7 +23,7 @@ func (info *InitializeTransaction) Initialize(keys u.ApiKeys) (u.IniitalizeTrans
 
 	req, err := http.NewRequest("POST", url, bytes.NewBuffer(payload))
 
-	resp := u.MakeReq(*req, keys)
+	resp := u.MakeReq(*req, keys, false)
 
 	err = json.Unmarshal(resp, &data)
 	if err != nil {
