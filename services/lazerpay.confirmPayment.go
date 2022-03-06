@@ -1,7 +1,7 @@
 package services
 
 import (
-	u "LazerPay-Go-SDK/utils"
+	u "github.com/Brymes/Go-LazerPay/utils"
 	"bytes"
 	"encoding/json"
 	"fmt"

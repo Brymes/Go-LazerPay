@@ -1,7 +1,7 @@
 package tests
 
 import (
-	"LazerPay-Go-SDK/services"
+	"github.com/Brymes/Go-LazerPay/services"
 	"testing"
 )
 

@@ -1,6 +1,6 @@
 package tests
 
-import "LazerPay-Go-SDK/utils"
+import "github.com/Brymes/Go-LazerPay/utils"
 
 var testKeys = utils.ApiKeys{
 	PubKey: "pk_live_0N24k7lsrr7NGfrDQpIjPGy9z61LkXjUqxX3r99XblXHemwMht",
