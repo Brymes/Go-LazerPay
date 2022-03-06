@@ -1,5 +1,7 @@
 # Go-LazerPay
-WIP: Unofficial Golang SDK for LazerPay
+Unofficial Golang SDK for
+
+#Usage
 
 #TESTING
 
