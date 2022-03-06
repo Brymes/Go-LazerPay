@@ -1,19 +1,52 @@
 # Go-LazerPay
-Unofficial Golang SDK for
 
-#Usage
+Unofficial Golang SDK for LazerPay
 
-#TESTING
+## Installation
 
-To Run Tests
+`go get github.com/Brymes/Go-LazerPay`
 
-```cd tests && go test-v```
-
+## Usage
 
 ```
-% cd tests && go test -v
+import (
+    "os"
+    "github.com/Brymes/Go-LazerPay.git"
+)
+
+var keys = LazerPay.utils.ApiKeys{
+    PubKey: os.Getenv("LAZERPAY_PUB_KEY"),
+ SecKey: os.Getenv("LAZERPAY_SEC_KEY"),    
+}
+
+var client = LazerPay{ keys }
+```
+
+### Get Accepted Coins
+
+```
+allCoins := client.getAcceptedCoins()
+```
+
+### Confirm Transaction
+
+```
+txid := LazerPay.services.ConfirmTransaction{
+    Identifier: "<Your_Transaction_ID>"
+}
+
+confirm := client.getAcceptedCoins(txid)
+```
+
+## TESTING
+
+```.
+$ export LAZERPAY_SEC_KEY="<key_here>" 
+$ export LAZERPAY_PUB_KEY="<key_here>" 
+
+$ cd tests && go test -v
 === RUN   TestAcceptedCoins
 --- PASS: TestAcceptedCoins (4.82s)
 PASS
-ok      LazerPay-Go-SDK/tests   7.891s
+ok      github.com/Brymes/Go-LazerPay/tests   7.891s
 ```
