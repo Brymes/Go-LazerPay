@@ -1,8 +1,11 @@
 package tests
 
-import "github.com/Brymes/Go-LazerPay/utils"
+import (
+	"github.com/Brymes/Go-LazerPay/utils"
+	"os"
+)
 
 var testKeys = utils.ApiKeys{
-	PubKey: "pk_live_0N24k7lsrr7NGfrDQpIjPGy9z61LkXjUqxX3r99XblXHemwMht",
-	SecKey: "pk_test_QVaSyqlCqhpY585oHV3hc01nfMZfOzhy5YpPIOc0LywoWK4EVt",
+	PubKey: os.Getenv("LAZERPAY_PUB_KEY"),
+	SecKey: os.Getenv("LAZERPAY_SEC_KEY"),
 }
